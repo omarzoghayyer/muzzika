@@ -166,7 +166,7 @@ export default {
             this.index++;
             // if we are at the last song, this will move it back to the start of the list
             if(this.index > this.songs.length-1){
-                this.index=0;
+                this.index=1;
             }
             this.current = this.songs[this.index];
             this.play(this.current);
@@ -175,13 +175,12 @@ export default {
             this.index--;
             if(this.index <0 ){
                 // this will move it to the end of the list
-                this.index = this.ogs.lengh -1;
+                this.index = this.songs.lengh -1;
             }
             this.current = this.songs[this.index];
-            this.play(this.current);
+          this.play(this.current);
 
         }
-     
 
     },
     created() {
@@ -192,15 +191,6 @@ export default {
 
 }
 </script>
-
-
-
-
-
-
-
-
-
 
 <style scoped>
     *{
@@ -319,8 +309,9 @@ export default {
     
     .playlist .song.playing {
         color: white;
-        background-image: linear-gradient(to right, #cc2e5d, #ff5858);
+        background-image: linear-gradient(to right, #cc9a2e, #ff5858);
         border-radius: 20px;
     }
 </style>
+
 
